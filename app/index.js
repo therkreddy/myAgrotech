@@ -21,23 +21,22 @@
     }
   ]);
 
+  var app = angular.module('app');
+
   //Load controller
-  angular.module('app')
-  .controller('MainController', [ '$scope', function($scope) {
+  app.controller('MainController', [ '$scope', function($scope) {
       $scope.sampleScope = "Wassup...";
     }
   ]);
 
-  angular.module('app')
-  .controller('HomeController', function($scope, HomeService) {
+  app.controller('HomeController', function($scope, HomeService) {
       $scope.HomeService = HomeService;
       HomeService.callRk();
     }
   );
 
   //Load a factory service
-  angular.module('app')
-  .factory('HomeService', function() {
+  app.factory('HomeService', function() {
       var HomeService = function() {
       };
       HomeService.callRk = function() {
