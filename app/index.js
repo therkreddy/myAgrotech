@@ -8,11 +8,11 @@
       // routes
       $routeProvider
         .when("/", {
-          templateUrl: "./html/wassup.html",
+          templateUrl: "./templates/wassup.html",
           controller: "MainController"
         })
         .when("/home", {
-          templateUrl: "./html/home.html",
+          templateUrl: "./templates/home.html",
           controller: "HomeController",
         })
         .otherwise({
@@ -28,22 +28,5 @@
       $scope.sampleScope = "Wassup...";
     }
   ]);
-
-  app.controller('HomeController', function($scope, HomeService) {
-      $scope.HomeService = HomeService;
-      HomeService.callRk();
-    }
-  );
-
-  //Load a factory service
-  app.factory('HomeService', function() {
-      var HomeService = function() {
-      };
-      HomeService.callRk = function() {
-        var self = this;
-        self.information = "So instead of using scope, attaching variables to the service, this instance directly";
-      };
-      return (HomeService);
-  });
-
+  
 }());
