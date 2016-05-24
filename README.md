@@ -3,6 +3,8 @@ Javascript angular.
 
 Steps to get this project:
 
+Make sure you have node, npm , and git set up on local already (run node --v, npm --v to verify if it is, Best to have latest)
+
 1. git clone https://github.com/therkreddy/myAgrotech.git
 
 Clone cheskondi.
@@ -11,15 +13,15 @@ Clone cheskondi.
 
 CD into your myAgrotech project
 
-3. npm install --save
+3. npm install 
 
 Install npm dependencies. Idi package.json use cheskoni , node modules ane oka folder create chestadi
 
-4. bower install --save
+4. bower install 
 
 Install bower dependencies. idi bower.json,bowerrrc vadkoni, bower components ane folder app lo create aitadi 
 
-5. gulp  lekapote gulp rk
+5. gulp  (lekapote) gulp rk
 
 Hitting this default command gulp or gulp rk will bring up the server
 
