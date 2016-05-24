@@ -9,23 +9,15 @@
       $routeProvider
         .when("/", {
           templateUrl: "./templates/wassup.html",
-          controller: "MainController"
+          controller: "HomeController"
         })
         .when("/home", {
           templateUrl: "./templates/home.html",
           controller: "HomeController",
         })
         .otherwise({
-           redirectTo: '/'
+           redirectTo: '/home'
         });
-    }
-  ]);
-
-  var app = angular.module('app');
-
-  //Load controller
-  app.controller('MainController', [ '$scope', function($scope) {
-      $scope.sampleScope = "Wassup...";
     }
   ]);
   

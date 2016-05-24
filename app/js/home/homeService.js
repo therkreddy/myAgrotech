@@ -2,9 +2,9 @@
   app.factory('HomeService', function() {
       var HomeService = function() {
       };
-      HomeService.callRk = function() {
+     HomeService.sayHello = function() {
         var self = this;
-        self.information = "So instead of using scope, attaching variables to the service, this instance directly";
+        self.information = "హోం సర్వీస్ నీకు దండం పెడ్తుంది ";
       };
       return (HomeService);
   });
