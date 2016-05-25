@@ -4,10 +4,6 @@ var connect = require('gulp-connect');
 var open = require('gulp-open');
 var os = require('os');
 var jshint = require('gulp-jshint');
-var uglify = require('gulp-uglify');
-var minifyCSS = require('gulp-minify-css');
-var clean = require('gulp-clean');
-var runSequence = require('run-sequence');
 
 //check browser version
 var browser = os.platform() === 'linux' ? 'google-chrome' : (
