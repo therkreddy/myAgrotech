@@ -3,6 +3,7 @@ var browserify = require('gulp-browserify');
 var connect = require('gulp-connect');
 var open = require('gulp-open');
 var os = require('os');
+var jshint = require('gulp-jshint');
 
 //check browser version
 var browser = os.platform() === 'linux' ? 'google-chrome' : (
@@ -26,9 +27,16 @@ gulp.task('openApp', function(){
   gulp.src(__filename)
   .pipe(open(options));
 });
+
+// Linting with Jshint
+gulp.task('lint', function() {
+  gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
+    .pipe(jshint())
+    .pipe(jshint.reporter('default'))
+});
  
 // default task
 gulp.task('default',
-  ['rk', 'openApp']
+  ['rk', 'openApp', 'lint']
 );
 
