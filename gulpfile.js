@@ -4,6 +4,7 @@ var connect = require('gulp-connect');
 var open = require('gulp-open');
 var os = require('os');
 var jshint = require('gulp-jshint');
+var concat = require('gulp-concat');
 
 //check browser version
 var browser = os.platform() === 'linux' ? 'google-chrome' : (
@@ -35,6 +36,11 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
+gulp.task('copyScripts', function () {
+  gulp.src(['app/**/module.js', 'app/**/*.js', '!./app/bower_components/**'])
+    .pipe(concat('app/bundle.js'))
+    .pipe(gulp.dest('.'));
+});
 
 // default task
 gulp.task('default',
