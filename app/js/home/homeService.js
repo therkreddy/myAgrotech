@@ -4,7 +4,7 @@
       };
      HomeService.sayHello = function() {
         var self = this;
-        self.information = "హోం సర్వీస్ నీకు దండం పెడ్తుంది ";
+        self.information = 'హోం సర్వీస్ నీకు దండం పెడ్తుంది ';
       };
       return (HomeService);
   });

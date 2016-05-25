@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var browserify = require('gulp-browserify');
+// var browserify = require('gulp-browserify');
 var connect = require('gulp-connect');
 var open = require('gulp-open');
 var os = require('os');
@@ -32,7 +32,7 @@ gulp.task('openApp', function(){
 gulp.task('lint', function() {
   gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
     .pipe(jshint())
-    .pipe(jshint.reporter('default'))
+    .pipe(jshint.reporter('default'));
 });
  
 // default task
