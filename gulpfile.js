@@ -1,10 +1,13 @@
 var gulp = require('gulp');
-// var browserify = require('gulp-browserify');
 var connect = require('gulp-connect');
 var open = require('gulp-open');
 var os = require('os');
-var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var ngAnnotate = require('gulp-ng-annotate');
+var sourcemaps = require('gulp-sourcemaps');
+var runSequence = require('run-sequence');
+var del = require('del');
 
 //check browser version
 var browser = os.platform() === 'linux' ? 'google-chrome' : (
@@ -29,21 +32,34 @@ gulp.task('openApp', function(){
   .pipe(open(options));
 });
 
-// Linting with Jshint
-gulp.task('lint', function() {
-  gulp.src(['./app/**/*.js', '!./app/bower_components/**'])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'));
+// watch Js changes and create a bundled js
+gulp.task('watch', function(){
+  gulp.watch('app/**/*.js', ['processBundledJs']); 
 });
 
-gulp.task('copyScripts', function () {
+gulp.task('processBundledJs', function() {
+  runSequence('cleanBundledJs',
+              ['bundleJs']);
+});
+
+// clean Bundle js
+gulp.task('cleanBundledJs', function () {
+  return del(['app/bundle.js']);
+});
+
+// Bundle all javascript files into one
+gulp.task('bundleJs', function () {
   gulp.src(['app/**/module.js', 'app/**/*.js', '!./app/bower_components/**'])
-    .pipe(concat('app/bundle.js'))
-    .pipe(gulp.dest('.'));
+    .pipe(concat('bundle.js'))
+    .pipe(ngAnnotate())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./app'));
 });
 
 // default task
-gulp.task('default',
-  ['rk', 'openApp', 'lint']
-);
-
+gulp.task('default', function() {
+   console.log('.........Tasks lined up to run in a sequence by Dr.Rk.......');
+  runSequence('processBundledJs',
+              ['rk', 'openApp', 'watch']);
+});
