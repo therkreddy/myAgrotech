@@ -32,34 +32,9 @@ gulp.task('openApp', function(){
   .pipe(open(options));
 });
 
-// watch Js changes and create a bundled js
-gulp.task('watch', function(){
-  gulp.watch('app/**/*.js', ['processBundledJs']); 
-});
-
-gulp.task('processBundledJs', function() {
-  runSequence('cleanBundledJs',
-              ['bundleJs']);
-});
-
-// clean Bundle js
-gulp.task('cleanBundledJs', function () {
-  return del(['app/bundle.js']);
-});
-
-// Bundle all javascript files into one
-gulp.task('bundleJs', function () {
-  gulp.src(['app/**/module.js', 'app/**/*.js', '!./app/bower_components/**'])
-    .pipe(concat('bundle.js'))
-    .pipe(ngAnnotate())
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./app'));
-});
-
 // default task
 gulp.task('default', function() {
    console.log('.........Tasks lined up to run in a sequence by Dr.Rk.......');
-  runSequence('processBundledJs',
-              ['rk', 'openApp', 'watch']);
+  runSequence('rk',
+              ['openApp']);
 });
