@@ -1,0 +1,52 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    color: black;
+} 
+
+.btn:hover, .btn:focus, .btn:active {
+  background-color: green;
+  color:white;
+}
+
+.btn{
+	background-color:white;
+	color:green;
+}
+
+.btn-primary{
+	color:green;
+}
+
+.btn-success {
+	color:green;
+}
+
+p.info{
+	text-transform: uppercase;
+	font-family: fantasy;
+	font-weight: bold;
+}
+
+img.gifimage{
+	height: 60%;
+	width: 20%;
+    border:1px solid gray;
+}
+
+span.highlight {
+	color: Green;
+	background-color: white;
+	font-size: 15;
+}
+
+span.highlighth4 {
+	color: 	#6B8E23;
+	font-size: 20;
+}
+
+span.highlighth1 {
+	color: 	#6B8E23;
+}

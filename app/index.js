@@ -11,7 +11,19 @@
           controller: 'HomeController'
         })
         .when('/home', {
-          templateUrl: './templates/home.html',
+          templateUrl: './templates/wassup.html',
+          controller: 'HomeController',
+        })
+        .when('/contact', {
+          templateUrl: './templates/contact.html',
+          controller: 'HomeController',
+        })
+        .when('/people', {
+          templateUrl: './templates/people.html',
+          controller: 'HomeController',
+        })
+        .when('/services', {
+          templateUrl: './templates/services.html',
           controller: 'HomeController',
         })
         .otherwise({
