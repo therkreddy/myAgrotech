@@ -7,11 +7,11 @@
       // routes
       $routeProvider
         .when('/', {
-          templateUrl: './templates/wassup.html',
+          templateUrl: './templates/home.html',
           controller: 'HomeController'
         })
         .when('/home', {
-          templateUrl: './templates/wassup.html',
+          templateUrl: './templates/home.html',
           controller: 'HomeController',
         })
         .when('/contact', {
