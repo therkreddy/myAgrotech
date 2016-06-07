@@ -5,7 +5,7 @@
   app.config(['$stateProvider', '$urlRouterProvider',
      function($stateProvider, $urlRouterProvider) {
       // routes
-      $urlRouterProvider.otherwise('contact');
+      $urlRouterProvider.otherwise('home');
       $stateProvider
         .state('home', {
                   url: '/home',
