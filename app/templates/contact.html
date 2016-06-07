@@ -6,7 +6,7 @@
       <div class="checkbox checkbox-slider--b-flat checkbox-slider-md"> 
         <label>
         <input 
-              ng-model="contact.isPreviousContact"
+              ng-model="HomeFactory.model.isPreviousContact"
               type="checkbox"><span>Contacted Us Before ?</span>
         </label>
       </div> 
@@ -15,7 +15,7 @@
         <input 
                class="form-control" 
                id="firstName"
-               ng-model="contact.firstName"
+               ng-model="HomeFactory.model.firstName"
                placeholder="First name">
       </div>
       <div class="form-group">
@@ -23,7 +23,7 @@
         <input 
                class="form-control" 
                id="lastName"
-               ng-model="contact.lastName"
+               ng-model="HomeFactory.model.lastName"
                placeholder="Last name">
       </div>
       <div class="form-group">
@@ -31,28 +31,28 @@
         <input 
               class="form-control"  
               id="phoneNumber"
-              ng-model="contact.phoneNumber"
+              ng-model="HomeFactory.model.phoneNumber"
               placeholder="Phone number">
       </div>
       <div class="checkbox checkbox-slider--c-weight checkbox-slider-md"> 
         <label>
         <input 
-              ng-model="contact.isBuyer"
+              ng-model="HomeFactory.model.isBuyer"
               type="checkbox"><span>Buyer</span>
         </label>
       </div>
     <div class="checkbox checkbox-slider--c-weight checkbox-slider-md"> 
        <label>
        <input 
-             ng-model="contact.isGrower"
+             ng-model="HomeFactory.model.isGrower"
              type="checkbox"><span>Grower</span>
        </label>
     </div>
     <div>
     <button  
           class="btn btn-primary" 
-          ng-click="contactSubmit()">click this no matter what</button> 
-   <div ng-if="contactSubmitted" 
+          ng-click="HomeFactory.contactSubmit()">submit</button> 
+   <div ng-if="HomeFactory.contactSubmitted" 
        class="well" 
        ng-include="'templates/info1.html'"></div>
   </div>

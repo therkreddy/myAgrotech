@@ -1,15 +1,17 @@
   app.factory('HomeFactory', function() {
-      // create a object using constructor function 
+      // create a object using constructor function
       var HomeFactory = function() {
+
       };
       // Attach methods to object
-     HomeFactory.sayHello = function() {
-        var self = this;
-        self.information = 'హోం సర్వీస్ నీకు దండం పెడ్తుంది';
-      };
      HomeFactory.goToContact = function() {
-        console.log('hi');
+        var self = this;
+        self.state.go('contact');
      };
+     HomeFactory.contactSubmit = function() {
+        var self = this;
+        self.contactSubmitted = true;
+     }
       // returning the factory object
       return (HomeFactory);
   });

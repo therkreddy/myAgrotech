@@ -1,5 +1,6 @@
- app.controller('HomeController', function($scope,HomeFactory) {
+ app.controller('HomeController', function($scope, $state, HomeFactory) {
       $scope.HomeFactory = HomeFactory;
-      HomeFactory.sayHello();
+      HomeFactory.model = {};
+      HomeFactory.state = $state;
     }
   );

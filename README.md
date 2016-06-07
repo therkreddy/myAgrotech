@@ -3,7 +3,9 @@ Javascript angular.
 
 Steps to get this project:
 
-Make sure you have node, npm , and git set up on local already (run node --v, npm --v to verify if it is, Best to have latest)
+Make sure you have node, npm , bower, and git set up on local already (run node --v, npm --v to verify if it is, Best to have latest)
+
+For bower package manager : npm install bower
 
 * git clone https://github.com/therkreddy/myAgrotech.git
 

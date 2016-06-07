@@ -1,34 +1,32 @@
 'use strict';
 
-  var app = angular.module('app', ['ngRoute', 'ngAnimate']);
+  var app = angular.module('app', ['ui.router']);
 
-  app.config(['$locationProvider','$routeProvider', function($locationProvider, $routeProvider) {
-      $locationProvider.hashPrefix('!');
+  app.config(['$stateProvider', '$urlRouterProvider',
+     function($stateProvider, $urlRouterProvider) {
       // routes
-      $routeProvider
-        .when('/', {
-          templateUrl: './templates/home.html',
-          controller: 'HomeController'
-        })
-        .when('/home', {
+      $urlRouterProvider.otherwise('contact');
+      $stateProvider
+        .state('home', {
+                  url: '/home',
           templateUrl: './templates/home.html',
           controller: 'HomeController',
         })
-        .when('/contact', {
+         .state('contact', {
+                  url: '/contact',
           templateUrl: './templates/contact.html',
           controller: 'HomeController',
         })
-        .when('/people', {
+         .state('people', {
+                  url: '/people',
           templateUrl: './templates/people.html',
           controller: 'HomeController',
         })
-        .when('/services', {
+      .state('services', {
+                  url: '/services',
           templateUrl: './templates/services.html',
           controller: 'HomeController',
         })
-        .otherwise({
-           redirectTo: '/home'
-        });
     }
   ]);
   
