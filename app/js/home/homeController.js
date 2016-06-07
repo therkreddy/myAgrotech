@@ -1,5 +1,5 @@
- app.controller('HomeController', function($scope,HomeService) {
-      $scope.HomeService = HomeService;
-      HomeService.sayHello();
+ app.controller('HomeController', function($scope,HomeFactory) {
+      $scope.HomeFactory = HomeFactory;
+      HomeFactory.sayHello();
     }
   );
