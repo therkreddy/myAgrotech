@@ -18,14 +18,14 @@ var browser = os.platform() === 'linux' ? 'google-chrome' : (
 gulp.task('rk', function() {
 	connect.server({
 		root: 'app/',
-		port: 9999
+		port: 9090
 	});
 });
 
 // Open the default application homepage
 gulp.task('openApp', function(){
   var options = {
-    uri: 'http://localhost:9999',
+    uri: 'http://localhost:9090',
     app: browser
   };
   gulp.src(__filename)
