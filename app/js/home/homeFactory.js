@@ -10,7 +10,7 @@
      };
      HomeFactory.contactSubmit = function() {
         var self = this;
-        self.contactSubmitted = true;
+        self.model.contactSubmitted = true;
      }
       // returning the factory object
       return (HomeFactory);
