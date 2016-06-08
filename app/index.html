@@ -14,14 +14,8 @@
     <link rel="shortcut icon" href="images/favicon.ico.png">
   </head>
   <body background="images/terrain.jpg">
-    <div class="container">
-      <h1  class="animated fadeInUp"> 
-           <span class="highlighth1 ">SOWJANYA AGROTECH</span>
-      </h1>
-      <!-- views -->
-      <div ng-include="'templates/navbar.html'"></div>
-      <div ui-view></div>
-    </div>
+      <div ng-include="'templates/header.html'"></div>
+      <div class="container" ui-view></div>
     <!-- scripts -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
