@@ -22,6 +22,11 @@
           templateUrl: './templates/production.html',
           controller: 'HomeController',
         })
+        .state('market', {
+                  url: '/market',
+          templateUrl: './templates/market.html',
+          controller: 'HomeController',
+        })
       .state('varieties', {
                   url: '/varieties',
           templateUrl: './templates/varieties.html',
