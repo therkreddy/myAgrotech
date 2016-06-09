@@ -17,14 +17,24 @@
           templateUrl: './templates/contact.html',
           controller: 'HomeController',
         })
-         .state('people', {
-                  url: '/people',
-          templateUrl: './templates/people.html',
+         .state('production', {
+                  url: '/production',
+          templateUrl: './templates/production.html',
           controller: 'HomeController',
         })
-      .state('services', {
-                  url: '/services',
-          templateUrl: './templates/services.html',
+      .state('varieties', {
+                  url: '/varieties',
+          templateUrl: './templates/varieties.html',
+          controller: 'HomeController',
+        })
+      .state('blog', {
+                  url: '/blog',
+          templateUrl: './templates/blog.html',
+          controller: 'HomeController',
+        })
+      .state('gallery', {
+                  url: '/gallery',
+          templateUrl: './templates/gallery.html',
           controller: 'HomeController',
         })
     }
