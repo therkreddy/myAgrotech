@@ -6,7 +6,7 @@
       // Attach methods to object
      HomeFactory.goToContact = function() {
         var self = this;
-        self.state.go('contact');
+        self.state.go('message');
      };
      HomeFactory.contactSubmit = function() {
         var self = this;

@@ -12,9 +12,9 @@
           templateUrl: './templates/home.html',
           controller: 'HomeController',
         })
-         .state('contact', {
-                  url: '/contact',
-          templateUrl: './templates/contact.html',
+         .state('message', {
+                  url: '/message',
+          templateUrl: './templates/message.html',
           controller: 'HomeController',
         })
          .state('production', {
