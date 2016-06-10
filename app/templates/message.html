@@ -1,64 +1,55 @@
 <div class="container">
 <fieldset class="panel-body animated rubberBand firstSection">
   <h4> <span class="highlighth4">Get in Touch </span></h4>
-  <div class="row">
-    <div class="col-xs-5">
-      <div class="checkbox checkbox-slider--b-flat checkbox-slider-md"> 
-        <label>
-        <input 
-              ng-model="HomeFactory.model.isPreviousContact"
-              type="checkbox"><span>Contacted Us Before ?</span>
-        </label>
-      </div> 
-      <div class="form-group">
-        <label for="firstName">అసలు పేరు </label>
-        <input 
-               class="form-control" 
-               id="firstName"
-               ng-model="HomeFactory.model.firstName"
-               placeholder="First name">
-      </div>
-      <div class="form-group">
-        <label for="lastName">ఇంటి పేరు </label>
-        <input 
-               class="form-control" 
-               id="lastName"
-               ng-model="HomeFactory.model.lastName"
-               placeholder="Last name">
-      </div>
-      <div class="form-group">
-        <label for="phoneNumber">ఫోన్ నెంబర్  <small>(Optional)</small></label>
-        <input 
-              class="form-control"  
-              id="phoneNumber"
-              ng-model="HomeFactory.model.phoneNumber"
-              placeholder="Phone number">
-      </div>
-      <div class="checkbox checkbox-slider--c-weight checkbox-slider-md"> 
-        <label>
-        <input 
-              ng-model="HomeFactory.model.isBuyer"
-              type="checkbox"><span>Buyer</span>
-        </label>
-      </div>
+  <div class="col-xs-5">
     <div class="checkbox checkbox-slider--c-weight checkbox-slider-md"> 
-       <label>
-       <input 
-             ng-model="HomeFactory.model.isGrower"
-             type="checkbox"><span>Grower</span>
+      <label>
+      <input 
+        ng-model="HomeFactory.model.isPreviousContact"
+        type="checkbox"><span><strong>Planning a visit?</strong></span>
+      </label>
+    </div>
+    <div class="checkbox checkbox-slider--c-weight checkbox-slider-md"> 
+      <label>
+      <input 
+        ng-model="HomeFactory.model.isPreviousCustomer"
+        type="checkbox"><span><strong>Want to buy Seed ?</strong></span>
        </label>
+    </div> 
+    <div class="form-group">
+      <input 
+        class="form-control" 
+        id="name"
+        ng-model="HomeFactory.model.name"
+        placeholder="Name">
+    </div>
+    <div class="form-group">
+      <input 
+       class="form-control" 
+       id="email"
+       ng-model="HomeFactory.model.email"
+       placeholder="Email">
+    </div>
+    <div class="form-group">
+      <input 
+       class="form-control"  
+       id="phoneNumber"
+       ng-model="HomeFactory.model.phoneNumber"
+       placeholder="Phone number">
+    </div>
+    <span class="label-success"><strong> Message </strong></span>
+    <div>
+      <textarea rows="4" cols="50">
+      </textarea>
     </div>
     <div>
-    <button  
-          class="btn btn-primary" 
-          ng-click="HomeFactory.contactSubmit()">submit</button> 
-   <div ng-if="HomeFactory.model.contactSubmitted" 
-       class="well" 
-       ng-include="'templates/info1.html'"></div>
+      <button  
+        class="btn btn-primary" 
+        ng-click="HomeFactory.contactSubmit()">submit</button> 
+    <div ng-if="HomeFactory.model.contactSubmitted" 
+         class="well" 
+         ng-include="'templates/info1.html'"></div>
+    </div>
   </div>
-
-  </div>
-
-   
 </fieldset>
 </div>

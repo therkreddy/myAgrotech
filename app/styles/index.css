@@ -2,10 +2,6 @@ body {
     background-color: white;
 }
 
-h1 {
-    color: black;
-} 
-
 .firstSection{
 	background-image: url('../images/farmwall.jpg');
 	background-size: cover;
