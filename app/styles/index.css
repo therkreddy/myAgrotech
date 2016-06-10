@@ -9,7 +9,11 @@ body {
     width: auto;
 }
 
-.btn:hover, .btn:focus, .btn:active {
+.header{
+	background-color: #F8F8FF;
+}
+
+.btn:hover, .navbtn:hover, .btn:focus, .navbtn:focus, .btn:active , navbtn:active{
   background-color: green;
   color:white;
 }
