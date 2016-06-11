@@ -27,4 +27,4 @@ Install bower dependencies. idi bower.json,bowerrrc vadkoni, bower components an
 
 Hitting this default command gulp or gulp rk will bring up the server
 
-* goto localhost:9999 E.N.J.O.Y
+* goto localhost:9090.J.O.Y
