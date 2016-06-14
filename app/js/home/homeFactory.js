@@ -1,12 +1,13 @@
   app.factory('HomeFactory', function() {
       // create a object using constructor function
       var HomeFactory = function() {
-      var self = this;       
+      var self = this;  
+      var proto = HomeFactory.prototype;     
         // Attach methods to object
-       self.goToContact = function() {
+       proto.goToContact = function() {
           self.state.go('message');
        };
-       self.contactSubmit = function() {
+       proto.contactSubmit = function() {
           self.model.contactSubmitted = true;
        }
       };
