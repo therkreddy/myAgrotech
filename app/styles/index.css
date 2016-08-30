@@ -9,11 +9,8 @@ body {
     width: auto;
 }
 
-.header{
-	background-color: #F8F8FF;
-}
 
-.btn:hover, .navbtn:hover, .btn:focus, .navbtn:focus, .btn:active , navbtn:active{
+.btn:hover, .navbtn:hover, .btn:focus, .navbtn:focus, .btn:active , .navbtn:active{
   background-color: green;
   color:white;
 }
@@ -33,6 +30,9 @@ body {
 
 .navbtn{
 	color:green;
+	padding: 5px 10px;
+    font-size: 22px;
+    border-radius: 2px;
 }
 
 p.info{

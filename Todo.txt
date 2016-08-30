@@ -2,3 +2,18 @@
 2. Use state.go transition
 3. background color
 4. Dropdown for services
+
+
+Requirements:
+
+Add upcoming events
+Newyork farmers video : take text from that
+
+Home Page:
+
+Video about the bairi farms
+An image carousel and a small paragraph adjacent to that describing the farms
+Increasing/ decreasing header size on scroll ?
+Side navigation bar with Our story, Place of the plant etc..
+Facebook, instagram etc , mailing list down of the home page as footer
+blend in photo with backdrop
