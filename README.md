@@ -3,28 +3,24 @@ Javascript angular.
 
 Steps to get this project:
 
-Make sure you have node, npm , bower, and git set up on local already (run node --v, npm --v to verify if it is, Best to have latest)
+1. Get Git, NodeJs, gulp & bower package manager globally (if you haven't already)
 
-For bower package manager : npm install bower
+* download git -> install -> configure user, editor -> set ssh automatic login (optional)
+* Install Node.js 
+* npm install gulp -g
+* npm install bower -g 
+
+2. clone and move into project 
 
 * git clone https://github.com/therkreddy/myAgrotech.git
-
-Clone cheskondi.
-
 * cd myAgrotech
 
-CD into your myAgrotech project
+3. Install npm and bower dependencies. Uses package.json and bower.json to create node modules and bower componenets directorys which contains deps. Bower.rrc dictates where to put the folder of bower componenets.
 
 * npm install 
+* bower install  (optional, as npm install is automated to run this bower install each time)
 
-Install npm dependencies. Idi package.json use cheskoni , node modules ane oka folder create chestadi
+4. kickstart server (gulp it) 
 
-* bower install 
-
-Install bower dependencies. idi bower.json,bowerrrc vadkoni, bower components ane folder app lo create aitadi 
-
-* gulp  (lekapote) gulp rk
-
-Hitting this default command gulp or gulp rk will bring up the server
-
-* goto localhost:9090.J.O.Y
+* gulp  (or) gulp rk
+* goto localhost:9090 (whatever the port number configured in gulpfile.js)   E.N.J.O.Y
